@@ -24,8 +24,8 @@ def solve_part_2(input_data: Sequence[int]) -> int:
 if __name__ == "__main__":
     input_data = [int(x) for x in read("day01")]
 
-    result_day_1 = solve_part_1(input_data)
-    print(f"Day 01, Part 1: {result_day_1}")
+    result_part_1 = solve_part_1(input_data)
+    print(f"Day 01, Part 1: {result_part_1}")
 
-    result_day_2 = solve_part_2(input_data)
-    print(f"Day 01, Part 2: {result_day_2}")
+    result_part_2 = solve_part_2(input_data)
+    print(f"Day 01, Part 2: {result_part_2}")
