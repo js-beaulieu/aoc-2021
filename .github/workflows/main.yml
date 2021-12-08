@@ -22,13 +22,5 @@ jobs:
             ~/.cache/pypoetry/virtualenvs
           key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
       - run: poetry install
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - run: poetry run pytest
-  code-quality:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - run: poetry run pre-commit run --all
+      - run: make cq
+      - run: make test-cov
