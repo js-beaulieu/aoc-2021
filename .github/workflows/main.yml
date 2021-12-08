@@ -26,9 +26,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - run: make test-cov
+      - run: poetry run pytest
   code-quality:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - run: make cq
+      - run: poetry run pre-commit run --all
