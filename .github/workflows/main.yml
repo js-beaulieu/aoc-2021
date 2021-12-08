@@ -26,7 +26,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - run: make test-coverage
+      - run: make test-cov
   code-quality:
     needs: build
     runs-on: ubuntu-latest
